@@ -10,11 +10,13 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.CHENYOUHUA"
+        android:screenOrientation ="fullUser"
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
+            android:screenOrientation="fullUser"
             android:theme="@style/Theme.CHENYOUHUA">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -3,16 +3,24 @@ package com.example.chenyouhua
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.Role.Companion.Image
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.example.chenyouhua.ui.theme.CHENYOUHUATheme
+import kotlin.reflect.typeOf
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,8 +32,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
-                    //personal("資工二A 陳宥樺")
+                    personal("資工二A 陳宥樺")
                 }
             }
         }
@@ -34,20 +41,19 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    Row{
+    Row(){
         Text(text = "Hello $name!")
     }
 }
 
-/*@Composable
+@Composable
 fun personal(name: String){
-    Column {
-        Text(text = "作者: $name")
-        Image{
-        painter = painterResource(
+    Column (){
+        Text(text = "作者: $name",textAlign = TextAlign.Center, modifier = Modifier.width(1000.dp))
+        Image(painter = painterResource(id = R.drawable.map), contentDescription = "地圖")
 
     }
-}*/
+}
 
 @Preview(showBackground = true)
 @Composable
